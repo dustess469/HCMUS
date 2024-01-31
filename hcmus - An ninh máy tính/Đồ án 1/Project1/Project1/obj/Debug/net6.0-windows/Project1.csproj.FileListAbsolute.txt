@@ -1,0 +1,17 @@
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\bin\Debug\net6.0-windows\Project1.exe
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\bin\Debug\net6.0-windows\Project1.deps.json
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\bin\Debug\net6.0-windows\Project1.runtimeconfig.json
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\bin\Debug\net6.0-windows\Project1.dll
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\bin\Debug\net6.0-windows\Project1.pdb
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\Project1.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\Project1.Form1.resources
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\Project1.csproj.GenerateResource.cache
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\Project1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\Project1.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\Project1.AssemblyInfo.cs
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\Project1.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\Project1.dll
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\refint\Project1.dll
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\Project1.pdb
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\Project1.genruntimeconfig.cache
+C:\Users\ADMIN\Documents\KHTN - An ninh máy tính\Project1\Project1\obj\Debug\net6.0-windows\ref\Project1.dll
