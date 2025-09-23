@@ -1,0 +1,11 @@
+SAML
+SAML, hoặc Ngôn ngữ đánh dấu xác nhận bảo mật, là một giao thức hoặc tập hợp các quy tắc mà các ứng dụng sử dụng để trao đổi thông tin xác thực với dịch vụ SSO. SAML sử dụng XML, một ngôn ngữ đánh dấu thân thiện với trình duyệt, để trao đổi dữ liệu nhận dạng người dùng. Các dịch vụ SSO dựa trên SAML có tính bảo mật và tính linh hoạt tốt hơn, vì các ứng dụng không cần lưu trữ thông tin chứng thực của người dùng trên hệ thống của chúng.
+
+OAuth
+OAuth, hay Xác thực mở, là một tiêu chuẩn mở cho phép các ứng dụng truy cập một cách bảo mật vào thông tin người dùng từ các trang web khác mà không cần cung cấp mật khẩu. Thay vì yêu cầu mật khẩu của người dùng, các ứng dụng sử dụng OAuth để được người dùng cho phép truy cập vào dữ liệu được bảo vệ bằng mật khẩu. OAuth xác lập tín nhiệm giữa các ứng dụng thông qua API, cho phép ứng dụng gửi và phản hồi các yêu cầu xác thực trong một khuôn khổ đã thiết lập.
+
+OIDC
+OpenID là một phương pháp sử dụng một tập hợp thông tin chứng thực của người dùng để truy cập nhiều trang web. Nó cho phép nhà cung cấp dịch vụ đảm nhận vai trò xác thực thông tin chứng thực của người dùng. Thay vì chuyển mã thông báo xác thực cho bên thứ ba cung cấp danh tính, các ứng dụng web sử dụng OIDC để yêu cầu thông tin bổ sung và xác minh tính xác thực của người dùng.
+
+Kerberos
+Kerberos là một hệ thống xác thực dựa trên phiếu cho phép hai hoặc nhiều bên xác minh lẫn nhau danh tính trên mạng của họ. Hệ thống này sử dụng mật mã bảo mật để ngăn chặn truy cập trái phép vào thông tin nhận dạng được truyền giữa máy chủ, máy khách và Trung tâm phân phối khóa.
