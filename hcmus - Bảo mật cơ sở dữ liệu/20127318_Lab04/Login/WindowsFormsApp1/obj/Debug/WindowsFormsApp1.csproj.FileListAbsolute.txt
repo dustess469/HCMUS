@@ -1,0 +1,23 @@
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ThisPC\source\repos\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ADMIN\Documents\KHTN - Bảo mật cơ sở dữ liệu\20127318_Lab04\LAB4\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
