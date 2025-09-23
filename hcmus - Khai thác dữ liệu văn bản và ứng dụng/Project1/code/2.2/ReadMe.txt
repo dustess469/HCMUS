@@ -1,0 +1,1 @@
+Sau khi mount drive, đặt 'Project1_Data.json' vào thư mục 'content' và chạy bình thường
