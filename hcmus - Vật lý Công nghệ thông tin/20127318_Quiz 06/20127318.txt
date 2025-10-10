@@ -1,0 +1,95 @@
+#include <WiFi.h>
+#include <PubSubClient.h>
+
+const char* ssid = "Wokwi-GUEST";
+const char* password = "";
+
+//***Set server***
+const char* mqttServer = "broker.mqtt-dashboard.com"; 
+int port = 1883;
+String MSSV = "0";
+int condition = 0;
+
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+void wifiConnect() {
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println(" Connected!");
+}
+
+void mqttReconnect() {
+  while(!client.connected()) {
+    Serial.println("Attemping MQTT connection...");
+    //***Change "123456789" by your student id***
+    if(client.connect("20127318")) {
+      Serial.println("connected");
+
+      //***Subscribe all topic you need***
+      client.subscribe("20127318/MSSV-button");
+    }
+    else {
+      Serial.println("try again in 5 seconds");
+      delay(5000);
+    }
+  }
+}
+
+void setup() {
+  Serial.begin(9600);
+  Serial.print("Connecting to WiFi");
+  pinMode(15, OUTPUT);
+
+  wifiConnect();
+  client.setServer(mqttServer, port);
+  client.setCallback(callback);
+}
+
+//MQTT Receiver
+void callback(char* topic, byte* message, unsigned int length) {
+  Serial.println(topic);
+  String strMsg;
+  for(int i=0; i<length; i++) {
+    strMsg += (char)message[i];
+  }
+  Serial.println(strMsg);
+  if(strMsg != "true")
+    MSSV = strMsg;
+  
+  if(condition == 0 && (MSSV == "20127569" || MSSV == "20127318" || MSSV == "20127330"))
+    ++condition;
+  
+  if(condition == 1 && (MSSV != "20127569" && MSSV != "20127330" && MSSV != "20127318"))
+    --condition;
+
+  if(condition == 1 && strMsg == "true")
+    ++condition;
+
+
+  if(condition == 2){
+    if(MSSV == "20127569"){
+      client.publish("20127318/Name", "To Dinh Phuong Nam");
+    }
+    else if(MSSV == "20127318"){
+      client.publish("20127318/Name", "Phan Tri Tai");
+    }
+    else if(MSSV == "20127330"){
+      client.publish("20127318/Name", "Trinh Duc Thien");
+    }
+    condition = 0;
+  }
+  //***Insert code here to control other devices***
+}
+
+void loop() {
+  if(!client.connected()) {
+    mqttReconnect();
+  }
+  client.loop();
+
+  delay(5000);
+}
