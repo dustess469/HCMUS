@@ -1,0 +1,26 @@
+id, name, birth year
+390487451,Lawrence Sperry,1990
+274878974,Michael Miller,1988
+254099823,Patricia Jones,1977
+356187925,Robert Brown,1965
+355548984,Angela Martinez,1995 
+310454876,Joseph Thompson,2000
+489456522,Linda Davis,1967
+489221823,Richard Jackson,1956
+548977562,William Ward,1984
+310454877,Chad Stewart,1996
+142519864,Betty Adams,2005
+269734834,George Wright,1982
+287321212,Michael Miller,1991
+552455348,Dorthy Lewis,1990
+248965255,Barbara Wilson,1995
+159542516,William Moore,1968
+348121549,Haywood Kelly,1983
+090873519,Elizabeth Taylor,1988
+486512566,David Anderson,1965
+619023588,Jennifer Thomas,2001
+015645489,Donald King,1995
+556784565,Mark Young,1996
+573284895,Eric Cooper,1977
+574489456,William Jones,2000
+574489457,Milo Brooks,2001
