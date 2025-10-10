@@ -1,0 +1,11 @@
+phan
+tri
+du
+dang
+bi
+buon
+vi
+khong
+duoc
+di
+hoc
