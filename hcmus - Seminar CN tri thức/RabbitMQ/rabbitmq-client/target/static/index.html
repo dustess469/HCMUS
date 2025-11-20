@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Bilal Pierre ABDELKADER">
+
+  <title>Rabbitmq Client - Admin</title>
+
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="img/favicon.ico" rel="shortcut icon" >
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+	crossorigin="anonymous"></script>
+
+</head>
+
+<body id="page-top">
+
+  <script type="text/javascript">
+    const stats = {
+			server: '',
+			nbMessages: 0,
+			messageRate: 0
+		  }
+
+	$(document).ready(function(){
+	  setInterval(function(){
+		$.ajax({
+		  url: 'http://localhost:8080/getConsumptionInfo',
+		  type: 'GET',
+		  contentType: 'application/json',
+		  crossDomain: true,
+		  success: function(response) {
+		    stats.server = response.server;
+		    stats.nbMessages = JSON.stringify(response.nbTotalConsumedMessages);
+		    stats.messageRate = JSON.stringify(response.nbConsumedMessagesPerSecond);
+		  }
+		});
+
+		$('#server').text(stats.server);
+		$('#nbMessages').text(stats.nbMessages);
+		$('#messageRate').text(stats.messageRate);
+	  }, 3000);
+	  	  
+	  $('#sender').click(function(){
+	    $.ajax({
+		  url: 'http://localhost:8080/send',
+		  type: 'GET',
+		  data: {message: $('#message').val()},
+		  contentType: 'application/json',
+		  crossDomain: true,
+		  success: function(response) {
+			setTimeout(
+			  function() {
+				$('a#sender .icon .fas').addClass('fa-arrow-right').removeClass('fa-check');
+				$('#sender').addClass('btn-primary').removeClass('btn-success');
+				$('#sender .text').text("Envoie Message");
+				$('#message').val("Message...");
+			  }, 3000);
+			$('a#sender .icon .fas').addClass('fa-check').removeClass('fa-arrow-right');
+			$('#sender').addClass('btn-success').removeClass('btn-primary');
+			$('#sender .text').text("Message Sent..");
+		  }
+		});
+	  });
+	});	
+  </script>
+	
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex" href="index.html">
+        <div class="sidebar-brand-text mx-3">RMQClient<sup>2</sup></div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+		</a>
+      </li>
+    </ul>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+		  <ul class="navbar-nav ml-auto">
+            <!-- Nav Item - User Information -->
+            <li class="nav-item no-arrow">
+              <a class="nav-link" href="https://github.com/bpabdelkader?tab=repositories" target="_blank">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">BP ABDELKADER</span>
+                <img class="img-profile rounded-circle" src="img/profilephoto.jpg">
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+		  <div class="card shadow mb-4">
+			<!-- Card Header - Accordion -->
+			<a href="#collapseConsumerCard" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+			  <h6 class="m-0 font-weight-bold text-primary">RabbitMQ Consumer</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse show" id="collapseConsumerCard">
+              <div class="card-body">
+				  <!-- Consumer Row -->
+				  <div class="row">
+
+					<!-- Rabbitmq Server -->
+					<div class="col-xl-3 col-md-6 mb-4">
+					  <div class="card border-left-primary shadow h-100 py-2">
+						<div class="card-body">
+						  <div class="row no-gutters align-items-center">
+							<div class="col mr-2">
+							  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Rabbitmq Server</div>
+							  <div id="server" class="h5 mb-0 font-weight-bold text-gray-800">127.9.3.1</div>
+							</div>
+							<div class="col-auto">
+							  <i class="fas fa-server fa-2x text-gray-300"></i>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+
+					<!-- Server Status -->
+					<div class="col-xl-3 col-md-6 mb-4">
+					  <div class="card border-left-success shadow h-100 py-2">
+						<div class="card-body">
+						  <div class="row no-gutters align-items-center">
+							<div class="col mr-2">
+							  <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Status</div>
+							  <div class="h5 mb-0 font-weight-bold text-gray-800">OK</div>
+							</div>
+							<div class="col-auto">
+							  <i class="fas fa-check-circle fa-2x text-gray-300"></i>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+
+					<!-- Number of consumed messages -->
+					<div class="col-xl-3 col-md-6 mb-4">
+					  <div class="card border-left-info shadow h-100 py-2">
+						<div class="card-body">
+						  <div class="row no-gutters align-items-center">
+							<div class="col mr-2">
+							  <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Consumed Messages</div>
+							  <div class="row no-gutters align-items-center">
+								<div class="col-auto">
+								  <div id="nbMessages" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50</div>
+								</div>
+							  </div>
+							</div>
+							<div class="col-auto">
+							  <i class="fas fa-chart-area fa-2x text-gray-300"></i>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+
+					<!-- Consumption Rate -->
+					<div class="col-xl-3 col-md-6 mb-4">
+					  <div class="card border-left-warning shadow h-100 py-2">
+						<div class="card-body">
+						  <div class="row no-gutters align-items-center">
+							<div class="col mr-2">
+							  <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Consumption Rate</div>
+							  <div id="messageRate" class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+							</div>
+							<div class="col-auto">
+							  <i class="fas fa-chart-bar fa-2x text-gray-300"></i>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  
+				  </div>
+	          </div>
+		    </div>
+	      </div>
+
+		  <div class="card shadow mb-4">
+			<!-- Card Header - Accordion -->
+			<a href="#collapseSenderCard" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+			  <h6 class="m-0 font-weight-bold text-primary">RabbitMQ Sender</h6>
+			</a>
+			<!-- Card Content - Collapse -->
+			<div class="collapse show" id="collapseSenderCard">
+			  <div class="card-body">
+				<div class="col-lg-14">
+				  <form class="form y">
+					<textarea id="message" class="form-control" rows="3" cols="1">Message...</textarea>
+
+					<div class="my-2"></div>
+					<a href="#" id="sender" class="btn btn-primary btn-icon-split btn-block">
+					  <span class="icon text-white-50">
+					    <i id="icon" class="fas fa-arrow-right"></i>
+					  </span>
+					<span class="text">Send Message</span>
+					</a>
+				  </form>
+				</div>	
+			  </div>
+			</div>
+		  </div>
+		 
+		</div>  
+      </div>
+
+	  <!-- Footer -->
+	  <footer class="sticky-footer bg-white">
+		<div class="container my-auto">
+		  <div class="copyright text-center my-auto">
+			<span>ngénia+ &copy; 2020</span>
+		  </div>
+		</div>
+	  </footer>
+	  
+    </div>
+</body>
+
+</html>

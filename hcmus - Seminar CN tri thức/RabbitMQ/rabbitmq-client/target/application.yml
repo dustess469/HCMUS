@@ -1,0 +1,17 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: "5672"
+    username: guest
+    password: guest
+    consumer:
+      listener:
+        concurrency: 16
+        max-concurrency: 32
+        batch-enabled: true
+        batch-size: 40
+        acknowledge-mode: AUTO # NONE, MANUAL, AUTO
+      queues: queue.demo,queue.demo2 # Multiple Queues should be declared on one line, separated by comma
+    sender:
+      exchange: amq.match
+      routingKey: #
